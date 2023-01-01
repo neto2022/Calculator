@@ -1,48 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
 </head>
 
 <body>
     <div id="main_div">
-        <div id="result">result</div>
+        <div id="result"><p id="textResult"><p/></div>
         <div id="numebers">
             <div>
-                <button>9</button>
-                <button>8</button>
-                <button>7</button>
+                <button onclick="calc(9)">9</button>
+                <button onclick="calc(8)">8</button>
+                <button onclick="calc(7)">7</button>
             </div>
             <div>
-                <button>6</button>
-                <button>5</button>
-                <button>4</button>
+                <button onclick="calc(6)">6</button>
+                <button onclick="calc(5)">5</button>
+                <button onclick="calc(4)">4</button>
             </div>
             <div>
-                <button>3</button>
-                <button>2</button>
-                <button>1</button>
+                <button onclick="calc(3)">3</button>
+                <button onclick="calc(2)">2</button>
+                <button onclick="calc(1)">1</button>
             </div>
             <div>
-                <button>0</button>
+                <button onclick="calc(0)">0</button>
             </div>
         </div>
         <div id="operatos">
-            <button>C</button>
-            <button>/</button>
-            <button>x</button>
-            <button>+</button>
-            <button>-</button>
-            <button>=</button>
+            <button onclick="calc('C')">C</button>
+            <button onclick="calc('/')">/</button>
+            <button onclick="calc('x')">x</button>
+            <button onclick="calc('+')">+</button>
+            <button onclick="calc('-')">-</button>
+            <button onclick="calc('=')">=</button>
         </div>
     </div>
+    <script src="/js/script.js"></script>
 </body>
-<script src="./script.js"></script>
 
 </html>
