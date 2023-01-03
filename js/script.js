@@ -1,12 +1,26 @@
-var num1 = 0;
-var num2 = 0;
 var result = document.getElementById('textResult');
-function calc(...params) {
-    if (params == 'C') {
-        let textContent = result.textContent
-        console.log(textContent)
+function UI(param1) {
+    if (param1 == 'C') {
         return result.textContent = '';
     }
-    var resultText = document.createTextNode(params)
-    result.appendChild(resultText)
+    let num1 = +param1;
+    console.log(num1, '1')
+    var resultText = document.createTextNode(param1);
+    result.appendChild(resultText);
+}
+    
+
+
+function operators(params) {
+    let restult1 = JSON.stringify(result.textContent).replace(/['"]+/g, '');
+    const a = restult1.split("");
+    console.log(typeof(restult1),restult1,a)
+    if (params == 'C') {
+        return result.textContent = '';
+    }
+
+    if (restult1[1] == 'x') {
+        console.log('ssss')
+        // return result.textContent = num2 * num1;
+    }
 }
