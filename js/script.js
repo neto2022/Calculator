@@ -8,7 +8,6 @@ function UI(param1) {
     var resultText = document.createTextNode(param1);
     result.appendChild(resultText);
 }
-{}
 
 function operators(params) {
     let restult1 = JSON.stringify(result.textContent).replace(/['"]+/g, '');
@@ -17,7 +16,7 @@ function operators(params) {
     if (params == 'C') {
         return result.textContent = '';
     }
-
+    console.log('')
     if (restult1[1] == 'x') {
         console.log('ssss')
         // return result.textContent = num2 * num1;
