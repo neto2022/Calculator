@@ -8,8 +8,6 @@ function UI(param1) {
     var resultText = document.createTextNode(param1);
     result.appendChild(resultText);
 }
-    
-
 
 function operators(params) {
     let restult1 = JSON.stringify(result.textContent).replace(/['"]+/g, '');
