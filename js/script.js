@@ -38,7 +38,7 @@ function operators(v1, op, v2) {
     if (op == 'x') {
         return result.textContent = v1 * v2;
     } else if (op == '/') {
-        return result.textContent = v1 / v2;
+        return result.textContent = (v1 / v2).toFixed(2);
     } else if (op == '+') {
         return result.textContent = v1 + v2;
     } else if (op == '-') {
