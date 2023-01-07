@@ -1,24 +1,47 @@
 var result = document.getElementById('textResult');
-function UI(param1) {
-    if (param1 == 'C') {
-        return result.textContent = '';
-    }
-    let num1 = +param1;
-    console.log(num1, '1')
-    var resultText = document.createTextNode(param1);
-    result.appendChild(resultText);
-}
+var element = document.querySelectorAll('button');
 
-function operators(params) {
-    let restult1 = JSON.stringify(result.textContent).replace(/['"]+/g, '');
-    const a = restult1.split("");
-    console.log(typeof(restult1),restult1,a)
-    if (params == 'C') {
-        return result.textContent = '';
-    }
-    console.log('')
-    if (restult1[1] == 'x') {
-        console.log('ssss')
-        // return result.textContent = num2 * num1;
+element.forEach(element => {
+    element.addEventListener('click', e => {
+        var resultE = e.target.dataset.value;
+        var splited;
+
+        if (resultE == '=') {
+            if (result.innerText.includes('x')) {
+                splited = result.innerText.split('x');
+                splited[2] = 'x'
+            } else if (result.innerText.includes('/')) {
+                splited = result.innerText.split('/');
+                splited[2] = '/'
+            } else if (result.innerText.includes('+')) {
+                splited = result.innerText.split('+');
+                splited[2] = '+'
+            } else if (result.innerText.includes('-')) {
+                splited = result.innerText.split('-');
+                splited[2] = '-'
+            }
+            operators(splited[0], splited[2], splited[1]);
+        }
+        if (resultE !== '=') {
+            result.innerText += resultE;
+        }
+        
+        if (resultE == 'C') {
+            return result.textContent = '';
+        }
+    })
+})
+
+function operators(v1, op, v2) {
+    console.log(v1, op, v2, 'op');
+    
+    if (op == 'x') {
+        return result.textContent = v1 * v2;
+    } else if (op == '/') {
+        return result.textContent = v1 / v2;
+    } else if (op == '+') {
+        return result.textContent = v1 + v2;
+    } else if (op == '-') {
+        return result.textContent = v1 - v2;
     }
 }
