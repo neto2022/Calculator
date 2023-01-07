@@ -33,8 +33,6 @@ element.forEach(element => {
 })
 
 function operators(v1, op, v2) {
-    console.log(v1, op, v2, 'op');
-    
     if (op == 'x') {
         return result.textContent = v1 * v2;
     } else if (op == '/') {
